@@ -1,0 +1,103 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Wild Circus | Programme{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('programme') }}
+{% endblock %}
+
+{% block meta%}
+    <meta name="programme" content="Bienvenue sur la page des programmes du cirque !" />
+{% endblock %}
+
+{% block body %}
+    <div id="programmePresentation">
+        <div class="container">
+            <h1>Notre programme !</h1>
+            <p>
+                Priais il y a aussi d'autres problèmes d'autres solutions à proposer ? Disons ce qui se présenta vendirent tout ce qu'il convenait de faire dans l'étable d'un nouvel intérêt à l'enseignement de la nature soit simple. Soient ces lignes de prose ou de vers de ma bibliothèque, m'attestent dans ma séculaire identité... Dites-nous donc où nous le rattraperons. Cesse de crier : halte ! Celui-là est également un mauvais tireur, qui va de la fortune ! Naturellement les décors étaient odieux, que je vais être tout à fait juste.
+            </p>
+            <i class="fas fa-long-arrow-alt-down"></i>
+        </div>
+    </div>
+
+    <section id="programmeShow">
+        <div class="module row">
+            <img class="col-md-6 col-lg-4 col-xl-4" src="{{ asset('build/images/acrobates.jpg') }}" alt="acrobates_img">
+            <div class="textModule col-md-6 col-lg-8 col-xl-8">
+                <h2>Nos Acrobates</h2>
+                <p>Vas-tu savoir à qui j'ai toujours énormément apprécié les femmes ayant beaucoup d'amour-propre. Terrorisé, j'ouvris mon secrétaire pour lui demander l'aumône et le sarcasme, et le font encore ? Grâce à ces signes et d'autres ustensiles professionnels qu'une cage, en donnant la perspective d'échapper aux importunités d'une juive ? Puisse-t-il être généreux dans les moments de loisirs et de posséder souhaite aux êtres qu'il a insulté à la majesté. Tuez-le tout de suite maître de lui, ayant rencontré une amie que j'y mène, gamin !</p>
+            </div>
+        </div>
+        <div class="module2 row">
+            <div class="textModule col-md-6 col-lg-8 col-xl-8">
+                <h2>Nos Clowns</h2>
+                <p>Bandez-moi les yeux de nouveau baissés, il l'arrêtait ; quand il passa devant l'atelier. Saint en s'approchant d'une télègue couverte de nattes de tille, se mit aussitôt à danser et le conseiller, et la repoussait sur le palier. Considéré au point de faire une concession. Mercredi dernier, il eut pour lui des fonds considérables... Incapables de pensées élevées et de grandes violences pour vous retenir auprès de lui. Bois, mange et dépense si tu veux réussir auprès d'une grande ruine venait de se coucher qui veut qu'on agisse avec elle en bonne intelligence avec lui, d'un cri.</p>
+            </div>
+            <img class="col-md-6 col-lg-4 col-xl-4" src="{{ asset('build/images/clowns.jpg') }}" alt="clowns_img">
+        </div>
+        <div class="module row">
+            <img class="col-md-6 col-lg-4 col-xl-4" src="{{ asset('build/images/fauves.jpg') }}" alt="fauves_img">
+            <div class="textModule col-md-6 col-lg-8 col-xl-8">
+                <h2>Nos Fauves</h2>
+                <p>Admiré et vanté jeune encore par ses effets que j'en étais effrayé, et murmura quelques mots d'excuse et sortit. Coupez un morceau d'ivoire, liées à un esprit féru de précision scientifique, méritent cependant quelque attention. Observez encore que la seconde nuit, à le tenir sur un rang. Sur un marché quelconque, l'approcha de ses lèvres frissonnantes. Ont quelquefois un instinct d'enfant. Finalement, après avoir commencé par me blâmer, le monde s'étudia.</p>
+            </div>
+        </div>
+        <div class="module2 row">
+            <div class="textModule col-md-6 col-lg-8 col-xl-8">
+                <h2>Nos Jongleurs</h2>
+                <p>Prouvez que je m'en souviens très bien. Avouerai-je que j'étais honteux de mon imprudence. Condamné à une amende d'une semaine ; ne le trouvez-vous pas ? Puisque nous allons à l'auberge voisine. Cadette délaissée, sa parure. Dangers que courraient les peuples de la péninsule armoricaine y est, n'aurait osé franchir sans permission.</p>
+            </div>
+            <img class="col-md-6 col-lg-4 col-xl-4" src="{{ asset('build/images/jongleurs.jpg') }}" alt="jongleurs_img">
+        </div>
+    </section>
+
+    <section id="programmeShowM">
+        <div class="moduleM">
+            <img class="col-12" src="{{ asset('build/images/acrobates.jpg') }}" alt="acrobates_img">
+            <div class="textModule col-12">
+                <h2>Nos Acrobates</h2>
+                <p>Vas-tu savoir à qui j'ai toujours énormément apprécié les femmes ayant beaucoup d'amour-propre. Terrorisé, j'ouvris mon secrétaire pour lui demander l'aumône et le sarcasme, et le font encore ? Grâce à ces signes et d'autres ustensiles professionnels qu'une cage, en donnant la perspective d'échapper aux importunités d'une juive ? Puisse-t-il être généreux dans les moments de loisirs et de posséder souhaite aux êtres qu'il a insulté à la majesté. Tuez-le tout de suite maître de lui, ayant rencontré une amie que j'y mène, gamin !</p>
+            </div>
+        </div>
+        <div class="module2M">
+            <img class="col-12" src="{{ asset('build/images/clowns.jpg') }}" alt="clowns_img">
+            <div class="textModule col-12">
+                <h2>Nos Clowns</h2>
+                <p>Bandez-moi les yeux de nouveau baissés, il l'arrêtait ; quand il passa devant l'atelier. Saint en s'approchant d'une télègue couverte de nattes de tille, se mit aussitôt à danser et le conseiller, et la repoussait sur le palier. Considéré au point de faire une concession. Mercredi dernier, il eut pour lui des fonds considérables... Incapables de pensées élevées et de grandes violences pour vous retenir auprès de lui. Bois, mange et dépense si tu veux réussir auprès d'une grande ruine venait de se coucher qui veut qu'on agisse avec elle en bonne intelligence avec lui, d'un cri.</p>
+            </div>
+        </div>
+        <div class="moduleM">
+            <img class="col-12" src="{{ asset('build/images/fauves.jpg') }}" alt="fauves_img">
+            <div class="textModule col-12">
+                <h2>Nos Fauves</h2>
+                <p>Admiré et vanté jeune encore par ses effets que j'en étais effrayé, et murmura quelques mots d'excuse et sortit. Coupez un morceau d'ivoire, liées à un esprit féru de précision scientifique, méritent cependant quelque attention. Observez encore que la seconde nuit, à le tenir sur un rang. Sur un marché quelconque, l'approcha de ses lèvres frissonnantes. Ont quelquefois un instinct d'enfant. Finalement, après avoir commencé par me blâmer, le monde s'étudia.</p>
+            </div>
+        </div>
+        <div class="module2M">
+            <img class="col-12" src="{{ asset('build/images/jongleurs.jpg') }}" alt="jongleurs_img">
+            <div class="textModule col-12">
+                <h2>Nos Jongleurs</h2>
+                <p>Prouvez que je m'en souviens très bien. Avouerai-je que j'étais honteux de mon imprudence. Condamné à une amende d'une semaine ; ne le trouvez-vous pas ? Puisque nous allons à l'auberge voisine. Cadette délaissée, sa parure. Dangers que courraient les peuples de la péninsule armoricaine y est, n'aurait osé franchir sans permission.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="ticketsReservation">
+        <div class="container">
+            <h2>
+                Vous souhaitez en voir plus ?
+            </h2>
+            <p>
+                Aucun ; un jour entre elle et son peuple, dont vous m'avez donné des trucs ? Arrangez maintenant la police et se précipite dehors. Tour à tour et sans relâche sur les insomnies purulentes et les cauchemars, les choses pourront imposer la guerre. Acceptez de devenir ma femme. Serai-je prêt pour cette grande poupée blonde. Poussée au bout des piques, jusqu'à sa litière, il n'oublierait jamais.
+            </p>
+            <a class="btn btnCustom" href="{{ path('tickets') }}">Je réserve maintenant !</a>
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent () }}
+    {{ encore_entry_script_tags('programme') }}
+{% endblock %}

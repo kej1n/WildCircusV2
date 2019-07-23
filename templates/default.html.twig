@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Wild Circus | Accueil{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('home') }}
+{% endblock %}
+
+{% block meta%}
+    <meta name="accueil" content="Bienvenue sur la page d'accueil du site !" />
+{% endblock %}
+
+{% block body %}
+    <div class="video">
+        <div class="opacity">
+            <h1>The Wild Circus !</h1>
+        </div>
+        <video autoplay muted loop id="myVideo" poster="{{ asset('../images/particulesPoster.png') }}">
+            <source src="{{ asset('../particles.mp4') }}" type="video/mp4">
+        </video>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent () }}
+{% endblock %}

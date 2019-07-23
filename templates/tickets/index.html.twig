@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Wild Circus | Billetterie{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block meta%}
+    <meta name="billetterie" content="Bienvenue sur la billetterie du cirque wild circus!" />
+{% endblock %}
+
+{% block body %}
+    <h1>Billetterie</h1>
+    {{ form_start(form) }}
+    <div class="form-group">
+        {{ form_row(form.email, {'label': 'Adresse mail :', 'attr': {'placeholder':'adresse@mail.fr'}}) }}
+    </div>
+    <button type="submit" class="btn btn-primary" >{{ button_label|default('Envoyer') }}</button>
+    {{ form_end(form) }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent () }}
+{% endblock %}

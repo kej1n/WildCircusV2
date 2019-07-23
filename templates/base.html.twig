@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+
+    {% block meta %}
+    {% endblock %}
+
+    <link rel="icon" href="{{ asset('build/images/ico16.png') }}" type="image/png">
+    <link rel="icon" sizes="32x32" href="{{ asset('build/images/ico32.png') }}" type="image/png">
+    <link rel="icon" sizes="64x64" href="{{ asset('build/images/ico64.png') }}" type="image/png">
+    <link rel="icon" sizes="96x96" href="{{ asset('build/images/ico96.png') }}" type="image/png">
+</head>
+<body>
+<header id="navHeader">
+    <nav class="navbar navHeaderBar navbar-expand-md">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navbar-nav navLinkBar" id="navbarSupportedContent">
+            {% if app.request.get('_route') == 'app_index' %}
+                <a class="nav-link link-active" href="{{ path('app_index') }}">Accueil</a>
+            {% else %}
+                <a class="nav-link" href="{{ path('app_index') }}">Accueil</a>
+            {% endif %}
+            {% if app.request.get('_route') == 'programme' %}
+                <a class="nav-link link-active" href="{{ path('programme') }}">Programme</a>
+            {% else %}
+                <a class="nav-link" href="{{ path('programme') }}">Programme</a>
+            {% endif %}
+            {% if app.request.get('_route') == 'informations' %}
+                <a class="nav-link link-active" href="{{ path('informations') }}">Informations</a>
+            {% else %}
+                <a class="nav-link" href="{{ path('informations') }}">Informations</a>
+            {% endif %}
+            {% if app.request.get('_route') =='galerie' %}
+                <a class="nav-link link-active" href="{{ path('galerie') }}">Galerie</a>
+            {% else %}
+                <a class="nav-link" href="{{ path('galerie') }}">Galerie</a>
+            {% endif %}
+            {% if app.request.get('_route') =='contact' %}
+                <a class="nav-link link-active" href="{{ path('contact') }}">Contact</a>
+            {% else %}
+                <a class="nav-link" href="{{ path('contact') }}">Contact</a>
+            {% endif %}
+            {% if app.request.get('_route') =='tickets' %}
+                <a class="nav-link link-active" href="{{ path('tickets') }}">Réserver vos billets</a>
+            {% else %}
+                <a class="nav-link" href="{{ path('tickets') }}">Réserver vos billets</a>
+            {% endif %}
+        </div>
+    </nav>
+</header>
+
+<main id="content">
+    {% block body %}{% endblock %}
+</main>
+
+<footer id="mainFooter">
+    <div class="top-footer">
+        <a class="nav-link" href="{{ path('contact') }}">Aide</a>
+        <a class="nav-link" href="{{ path('cgu') }}">C.G.U</a>
+        <a class="nav-link" href="https://www.linkedin.com/in/samuel-freche/" target="_blank">Nous suivre</a>
+    </div>
+    <div class="bottom-footer">
+        <a href="https://wildcodeschool.fr/" target="_blank">Made with 💕 by Wild Code School</a>
+    </div>
+</footer>
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+{% endblock %}
+
+</body>
+</html>

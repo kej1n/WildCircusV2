@@ -1,0 +1,66 @@
+@import "vars";
+
+header{
+  margin-bottom: 30px;
+}
+
+footer{
+  margin-top:30px;
+}
+
+#contactSection{
+  font-family: $font-secondary;
+  h1{
+    margin-bottom: 30px;
+    font-size: 50px;
+    text-align: center;
+  }
+  h2{
+    margin-top: 15px;
+    margin-bottom:5px;
+    font-size: 25px;
+    text-align: left;
+  }
+  p{
+    text-align: justify-all;
+    font-size:18px;
+  }
+}
+
+#messageContainer{
+  margin-top:20px;
+}
+
+.btnCustom{
+  margin-top:10px;
+  background-color:$primary;
+  color:$link-colorHover;
+  border:1px solid $primary;
+  font-size:20px;
+  font-family:$font-secondary;
+  transition: 0.2s ease-out;
+}
+.btnCustom:hover {
+  background-color:$link-colorHover;
+  color:$secondary;
+  border: 1px solid $secondary;
+  transition:0.2s ease-in;
+}
+.btnCustom:focus, .btnCustom:active {
+  background-color:$secondary !important;
+  color:$link-colorHover !important;
+  border: 1px solid $link-colorHover !important;
+  box-shadow:none !important;
+  transition:0.2s ease-in;
+}
+
+@media screen and (max-width: 767.98px){
+  h1{
+    font-size: 40px !important;
+  }
+}
+@media screen and (min-width: 768px){
+  #messageContainer{
+    width:50%;
+  }
+}

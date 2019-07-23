@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Wild Circus | Contact{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('contact') }}
+{% endblock %}
+
+{% block meta%}
+    <meta name="contact" content="Bienvenue sur la page contact du cirque wild circus!" />
+{% endblock %}
+
+{% block body %}
+    <section id="contactSection">
+        <div class="container">
+            <h1>Un problème, besoin d'une information ? Contactez-nous !</h1>
+            <p>Ou tu as peut être juste envie de nous faire parvenir un retour, ou de nous apporter une suggestion, tout ça tu peux le faire avec le formulaire si dessous !</p>
+            <p>Accorde-moi seulement comme grâce dernière de me laisser rhabiller ! Incapables de pensées élevées et de tous vos mouvements. Pense à tous ces effroyables malheurs qui tombaient sur les roches qui en bas, passaient les ombres rapides des promeneurs.</p>
+        </div>
+        {% for label, messages in app.flashes %}
+            <div class="container">
+                {% for message in messages %}
+                    <div class="alert alert-{{ label }} mt-3">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+
+        <div id="messageContainer" class="container">
+            {{ form_start(form) }}
+            <div class="form-group">
+                <h2>{{ form_label(form.email, 'Adresse mail :') }}</h2>
+                {{ form_widget(form.email, {'attr': {'placeholder':'Adresse@mail.fr', 'class':'form-control'}}) }}
+            </div>
+            <div class="form-group">
+                <h2>{{ form_label(form.category, 'Sujet :') }}</h2>
+                {{ form_widget(form.category, {'attr': {'placeholder':'Sujet du message', 'class':'form-control'}}) }}
+            </div>
+            <div class="form-group">
+                <h2> {{ form_label(form.content, 'Message :' )}}</h2>
+                {{ form_widget(form.content, {'attr': {'placeholder':'Votre message', 'class':'form-control', 'rows':'3'}}) }}
+            </div>
+            <button type="submit" class="btn btn-primary btnCustom form-control" >{{ button_label|default('Envoyer') }}</button>
+            {{ form_end(form) }}
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent () }}
+{% endblock %}

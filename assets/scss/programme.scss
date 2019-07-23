@@ -1,0 +1,261 @@
+@import "vars";
+
+footer{
+  margin-top:30px;
+}
+
+body{
+  overflow-x: hidden !important;
+}
+
+#programmePresentation{
+  font-family: $font-secondary;
+  padding-top:30px;
+  padding-bottom:20px;
+  margin-bottom:20px;
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), url("../images/programme.jpg") center;
+  h1{
+    margin-bottom: 30px;
+    font-size: 50px;
+    text-align: center;
+    color:$link-colorHover;
+  }
+  p{
+    text-align: justify-all;
+    font-size:18px;
+    color:$link-colorHover;
+  }
+  .container{
+   background:$bgOpacity;
+    width:95%;
+    margin:20px;
+    padding:5px 20px 5px 20px;
+    border-radius:10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.fa-long-arrow-alt-down{
+  margin-top:20px;
+  margin-bottom: 10px;
+  color:$link-colorHover;
+  font-size:50px;
+  text-align: center;
+}
+
+#programmeShow{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#programmeShowM{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.module {
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  &:nth-child(even) {
+    margin-right: 0;
+  }
+}
+
+.module2 {
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  &:nth-child(even) {
+    margin-right: 0;
+  }
+}
+
+.moduleM {
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  &:nth-child(even) {
+    margin-right: 0;
+  }
+}
+
+.module2M {
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  &:nth-child(even) {
+    margin-right: 0;
+  }
+}
+
+.already-visible {
+  transform: translateX(0) !important;
+  animation: none !important;
+}
+
+.come-in {
+  transform: translateX(-100%);
+  animation: come-in 2s ease forwards;
+}
+.come-in:nth-child(odd) {
+  animation-duration: 2s;
+}
+
+.come-in2 {
+  transform: translateX(100%);
+  animation: come-in 2s ease forwards;
+}
+.come-in2:nth-child(odd) {
+  animation-duration: 2s;
+}
+
+.come-inM {
+  transform: translateY(100%);
+  animation: come-in 1s ease forwards;
+}
+.come-inM:nth-child(odd) {
+  animation-duration: 1s;
+}
+
+.come-in2M {
+  transform: translateY(100%);
+  animation: come-in 1s ease forwards;
+}
+.come-in2M:nth-child(odd) {
+  animation-duration: 1s;
+}
+
+@keyframes come-in {
+  to { transform: translateY(0); }
+}
+
+.textModule{
+  h2{
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-align: center;
+  }
+  p{
+    text-align: justify-all;
+    font-size:18px;
+  }
+}
+
+.row{
+  align-content: center;
+  align-items: center;
+}
+
+#ticketsReservation{
+  font-family: $font-secondary;
+  margin-top: 20px;
+  padding-top:30px;
+  padding-bottom: 30px;
+  width:100%;
+  background:$primary;
+  .container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2{
+      margin-bottom: 30px;
+      font-size: 40px;
+      text-align: center;
+      color:white;
+    }
+    p{
+      text-align: center;
+      font-size:18px;
+      color:white;
+    }
+  }
+  .btnCustom{
+    margin-top:10px;
+    background-color:rgb(255,255,255);
+    color:black;
+    border:1px solid rgb(255,255,255);
+    font-size:20px;
+    font-family:$font-secondary;
+    transition: 0.2s ease-out;
+  }
+  .btnCustom:hover {
+    background-color:$secondary;
+    color:$link-colorHover;
+    border: 1px solid $secondary;
+    transition:0.2s ease-in;
+  }
+  .btnCustom:focus, .btnCustom:active {
+    background-color:$link-color !important;
+    color:$link-colorHover !important;
+    border: 1px solid $link-color !important;
+    box-shadow:none !important;
+    transition:0.2s ease-in;
+  }
+}
+
+footer{
+  margin-top: 0 !important;
+}
+
+@media screen and (max-width: 767.98px){
+  #content{
+    margin-top:60px !important;
+  }
+  #programmePresentation{
+    height: calc(100vh - 60px);
+  }
+  .moduleM{
+    min-height: 150px;
+  }
+  .module2M{
+    min-height: 150px;
+  }
+  #programmeShow{
+    display:none;
+  }
+  .textModule {
+    h2 {
+      margin-top:30px;
+      margin-bottom: 10px;
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (min-width: 768px){
+  #programmePresentation{
+    height: calc(100vh - 75px);
+  }
+  .module{
+    min-height: 250px;
+  }
+  .module2{
+    min-height: 250px;
+  }
+  #programmeShowM{
+    display:none;
+  }
+
+  img{
+    max-height:300px;
+  }
+}
